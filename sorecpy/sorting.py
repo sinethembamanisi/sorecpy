@@ -53,12 +53,11 @@ def merge_sort(items):
     result += half1[i:]
     result += half2[j:]
     return result
-    
+
 #function 7
 def quick_sort(items):
 
     #Return array of items, sorted in ascending order'''
-    def quick_sort(items):
 
     '''Return array of items, sorted in ascending order'''
 
