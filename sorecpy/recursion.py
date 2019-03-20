@@ -20,20 +20,20 @@ def fibonacci(n):
 #function 3
 def factorial(n):
 
-    #Return n!
-    factor = 1
-    for i in range(n):
-        factor = n*i
-    return factor
+    '''Return n!'''
+
+    result = 1
+    for i in range(1,n+1,1):
+        result *= i
+    return result
 
 #function 4
 def reverse(word):
 
-    #Return word in reverse
-    word_2 = ""
-    for x in word:
-        word_2= x + word_2
+    '''Return word in reverse'''
 
-    return word_2
+    rev_word =""
 
-#function 5
+    for i in word:
+        rev_word = i + rev_word
+    return rev_word
