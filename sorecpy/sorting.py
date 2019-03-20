@@ -13,23 +13,47 @@ def bubble_sort(items):
 #function 6
 def merge_sort(items):
 
-    #Return array of items, sorted in ascending order'''
-    if len(items)<2:
-        return items
 
-    result,mid=[],int(len(items)/2)
-    y = merge_sort(items[:mid])
-    z = merge_sort(items[mid:])
+    '''Return array of items, sorted in ascending order'''
+    length = len(items)
 
-    while (len(y)>0) and (len(z)>0):
-        if y[0]>z[0]:
-            result.append(z.pop(0))
+    if length > 1:
+        mid = length // 2
+        half1 = items[:mid]
+        half2 = items[mid:]
+
+
+#---------bubble_sorting for half1----------------
+    x = len(half1)
+    for a in range(x):
+        for b in range(x-1):
+            if (half1[a] < half1[b]):
+                half1[a], half1[b] = half1[b], half1[a]
+
+
+#----------bubble_sorting for half2--------------------
+
+    y = len(half2)
+    for a in range(y):
+        for b in range(y-1):
+            if (half2[a] < half2[b]):
+                half2[a], half2[b] = half2[b], half2[a]
+
+
+#----------------------------------------------------
+    i = j = 0
+    result = []
+    while i < len(half1) and j < len(half2):
+        if half1[i] < half2[j]:
+            result.append(half1[i])
+            i += 1
         else:
-            result.append(y.pop(0))
-
-    result.extend(y+z)
+            result.append(half2[j])
+            j += 1
+    result += half1[i:]
+    result += half2[j:]
     return result
-
+    
 #function 7
 def quick_sort(items):
 
