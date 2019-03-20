@@ -1,16 +1,7 @@
 #function 1
 def sum_array(array):
 
-    '''
-    Returns sum of all items in array
-    Args:
-        array :list or array type object containinng numerical values.
-    Returns:
-        sum : the sum of all the array elements.
-    Examples:
-        >>> sum_array([1,2,3])
-        6
-    '''
+    #Returns sum of all items in array
     total = 0
     for i in array:
         total +=  array[i-1]
@@ -19,12 +10,7 @@ def sum_array(array):
 #function 2
 def fibonacci(n):
 
-    '''
-    Return nth term in fibonacci sequence
-    Args:
-        n : an integer value
-    Returns:
-    '''
+    #Return nth term in fibonacci sequence
     if n <= 1:
         return n
 
@@ -34,7 +20,7 @@ def fibonacci(n):
 #function 3
 def factorial(n):
 
-    '''Return n!'''
+    #Return n!
     factor = 1
     for i in range(n):
         factor = n*i
@@ -43,7 +29,7 @@ def factorial(n):
 #function 4
 def reverse(word):
 
-    '''Return word in reverse'''
+    #Return word in reverse
     word_2 = ""
     for x in word:
         word_2= x + word_2
